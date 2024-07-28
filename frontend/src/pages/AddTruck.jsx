@@ -24,7 +24,7 @@ const AddTruck = () => {
       .post('https://transport-orpin.vercel.app/trucks', data)
       .then(() => {
         setLoading(false);
-        enqueueSnackbar('Book Created successfully', { variant: 'success' });
+        enqueueSnackbar('Truck Created successfully', { variant: 'success' });
         navigate('/');
       })
       .catch((error) => {
