@@ -17,7 +17,7 @@ const EditTruck = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/trucks/${id}`)
+      .get(`https://transport-orpin.vercel.app/trucks/${id}`)
       .then((response) => {
         setTruckNumber(response.data.trucknum);
         setDriver(response.data.dname);
@@ -40,7 +40,7 @@ const EditTruck = () => {
 
     setLoading(true);
     axios
-      .put(`http://localhost:5555/trucks/${id}`, data)
+      .put(`https://transport-orpin.vercel.app/trucks/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Truck Edited successfully", { variant: "success" });

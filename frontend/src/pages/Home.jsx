@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
       setLoading(true);
       axios
-        .get("http://localhost:5555/trucks")
+        .get("https://transport-orpin.vercel.app/trucks")
         .then((response) => {
           setTrucks(response.data.data);
           setLoading(false);

@@ -13,7 +13,7 @@ const DeleteTruck = () => {
   
   const handleDeleteTruck = () => { 
     setLoading(true);
-    axios.delete(`http://localhost:5555/trucks/${id}`)
+    axios.delete(`https://transport-orpin.vercel.app/trucks/${id}`)
     .then(()=>{
       setLoading(false);
       enqueueSnackbar('Truck deleted successfully', { variant: 'success' });

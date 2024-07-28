@@ -21,7 +21,7 @@ const AddTruck = () => {
     };
     setLoading(true);
     axios
-      .post('http://localhost:5555/trucks', data)
+      .post('https://transport-orpin.vercel.app/trucks', data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
